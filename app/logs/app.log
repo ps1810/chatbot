@@ -1,0 +1,47 @@
+2025-10-07 23:31:14,274 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:34:49,834 loglevel=INFO   logger=app.infrastructure.model_loader load() L20   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L20  
+2025-10-07 23:34:59,696 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:40:10,064 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-07 23:40:13,854 loglevel=INFO   logger=app.infrastructure.model_loader load() L20   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L20  
+2025-10-07 23:41:54,070 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:43:04,100 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-07 23:43:18,791 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-07 23:43:22,412 loglevel=INFO   logger=app.infrastructure.model_loader load() L20   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L20  
+2025-10-07 23:43:53,543 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-07 23:44:01,814 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-07 23:44:04,542 loglevel=INFO   logger=app.infrastructure.model_loader load() L20   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L20  
+2025-10-07 23:44:22,924 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-07 23:44:32,984 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-07 23:44:35,801 loglevel=INFO   logger=app.infrastructure.model_loader load() L20   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L20  
+2025-10-07 23:44:35,817 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:44:35,821 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:44:35,824 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:44:36,006 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-07 23:44:46,323 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-07 23:44:48,623 loglevel=INFO   logger=app.infrastructure.model_loader load() L20   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L20  
+2025-10-07 23:45:11,091 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-07 23:45:18,540 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-07 23:45:20,979 loglevel=INFO   logger=app.infrastructure.model_loader load() L20   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L20  
+2025-10-07 23:45:24,515 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:45:24,522 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:45:24,523 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:46:44,840 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:46:44,842 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:46:44,845 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:46:56,210 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:46:56,216 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:46:56,220 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:48:33,569 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-07 23:49:55,235 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-07 23:49:58,270 loglevel=INFO   logger=app.infrastructure.model_loader load() L20   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L20  
+2025-10-07 23:49:58,534 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:51:01,368 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-07 23:51:11,929 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-07 23:51:15,112 loglevel=INFO   logger=app.infrastructure.model_loader load() L20   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L20  
+2025-10-07 23:51:24,418 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:51:24,420 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:52:36,777 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:52:36,791 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:52:42,328 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:52:42,336 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
+2025-10-07 23:53:00,477 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
