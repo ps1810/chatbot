@@ -222,12 +222,12 @@ Response:
 
 **Backend:**
 ```bash
-docker build -t brainbay-backend ./backend
+docker build -t chat-backend ./backend
 ```
 
 **Frontend:**
 ```bash
-docker build -t brainbay-frontend ./frontend
+docker build -t chat-frontend ./frontend
 ```
 
 ### Health Checks
