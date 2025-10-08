@@ -45,3 +45,106 @@
 2025-10-07 23:52:42,328 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
 2025-10-07 23:52:42,336 loglevel=INFO   logger=app.api.v1.chat health() L18   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L18  
 2025-10-07 23:53:00,477 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 14:24:14,594 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 14:24:20,364 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 14:25:01,559 loglevel=INFO   logger=app.api.v1.chat health() L27   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L27  
+2025-10-08 14:25:01,561 loglevel=INFO   logger=app.api.v1.chat health() L27   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L27  
+2025-10-08 14:26:24,221 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 14:28:03,704 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 14:28:08,322 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 14:28:23,256 loglevel=INFO   logger=app.api.v1.chat health() L27   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L27  
+2025-10-08 14:28:23,265 loglevel=INFO   logger=app.api.v1.chat health() L27   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L27  
+2025-10-08 14:33:34,880 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 14:37:11,579 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 14:37:16,166 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 14:37:30,581 loglevel=INFO   logger=app.api.v1.chat health() L27   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L27  
+2025-10-08 14:37:30,596 loglevel=INFO   logger=app.api.v1.chat health() L27   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L27  
+2025-10-08 14:40:04,774 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 14:40:51,212 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 14:40:55,514 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 14:41:04,944 loglevel=INFO   logger=app.api.v1.chat health() L45   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L45  
+2025-10-08 14:41:04,946 loglevel=INFO   logger=app.api.v1.chat health() L45   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L45  
+2025-10-08 14:55:32,689 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 15:45:55,000 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 15:46:15,348 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 15:46:44,419 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 15:46:49,892 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 15:47:18,226 loglevel=ERROR  logger=app.api.v1.chat chat() L37   Unexpected error: coroutines cannot be used with run_in_executor()   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L37  
+Traceback (most recent call last):
+  File "/Users/psingh/Documents/brainbay/app/api/v1/chat.py", line 23, in chat
+    response = await loop.run_in_executor(
+                     ~~~~~~~~~~~~~~~~~~~~^
+        executor,
+        ^^^^^^^^^
+    ...<2 lines>...
+        request.history
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "uvloop/loop.pyx", line 2735, in uvloop.loop.Loop.run_in_executor
+TypeError: coroutines cannot be used with run_in_executor()
+2025-10-08 15:54:49,070 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 15:55:00,118 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 15:55:04,709 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 15:55:11,974 loglevel=ERROR  logger=app.api.v1.chat chat() L33   Unexpected error: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object QueuedC...ice.chat at 0x1149cbe40>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L33  
+Traceback (most recent call last):
+  File "/Users/psingh/Documents/brainbay/app/api/v1/chat.py", line 25, in chat
+    return ChatResponse(response=response)
+  File "/Users/psingh/Library/Caches/pypoetry/virtualenvs/brainbay-CBsLHR_U-py3.13/lib/python3.13/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object QueuedC...ice.chat at 0x1149cbe40>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2025-10-08 15:59:53,023 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 16:04:33,442 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 16:04:38,120 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 16:04:44,563 loglevel=INFO   logger=app.api.v1.chat health() L41   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L41  
+2025-10-08 16:04:44,576 loglevel=INFO   logger=app.api.v1.chat health() L41   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L41  
+2025-10-08 16:04:47,068 loglevel=ERROR  logger=app.api.v1.chat chat() L33   Unexpected error: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object QueuedC...ice.chat at 0x1103ee040>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L33  
+Traceback (most recent call last):
+  File "/Users/psingh/Documents/brainbay/app/api/v1/chat.py", line 25, in chat
+    return ChatResponse(response=response)
+  File "/Users/psingh/Library/Caches/pypoetry/virtualenvs/brainbay-CBsLHR_U-py3.13/lib/python3.13/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object QueuedC...ice.chat at 0x1103ee040>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2025-10-08 16:05:47,064 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 16:06:12,234 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 16:06:15,517 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 16:11:44,330 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 16:11:49,273 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 16:14:18,453 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 16:30:41,774 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 16:30:46,518 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 16:30:46,519 loglevel=INFO   logger=app.core.periodic_cleanup start() L19   Started periodic cleanup (every 60s)   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L19  
+2025-10-08 16:31:46,522 loglevel=ERROR  logger=app.core.periodic_cleanup _cleanup_loop() L43   Error in cleanup loop: 'ChatService' object has no attribute 'clear_memory'   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L43  
+2025-10-08 16:32:01,242 loglevel=INFO   logger=app.core.periodic_cleanup stop() L29   Stopped periodic cleanup   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L29  
+2025-10-08 16:37:56,862 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 16:38:02,089 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 16:38:02,090 loglevel=INFO   logger=app.core.periodic_cleanup start() L18   Started periodic cleanup (every 60s)   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L18  
+2025-10-08 16:39:02,094 loglevel=INFO   logger=app.services.chat_service clear_memory() L115  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L115 
+2025-10-08 16:40:02,366 loglevel=INFO   logger=app.services.chat_service clear_memory() L115  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L115 
+2025-10-08 16:41:02,604 loglevel=INFO   logger=app.services.chat_service clear_memory() L115  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L115 
+2025-10-08 16:42:02,861 loglevel=INFO   logger=app.services.chat_service clear_memory() L115  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L115 
+2025-10-08 16:42:11,688 loglevel=INFO   logger=app.services.chat_service clear_memory() L115  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L115 
+2025-10-08 16:42:11,914 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 16:42:11,915 loglevel=INFO   logger=app.core.periodic_cleanup stop() L28   Stopped periodic cleanup   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L28  
+2025-10-08 16:49:44,163 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 16:49:48,596 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 16:49:48,596 loglevel=INFO   logger=app.core.periodic_cleanup start() L18   Started periodic cleanup (every 60s)   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L18  
+2025-10-08 16:50:48,599 loglevel=INFO   logger=app.services.chat_service clear_memory() L125  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L125 
+2025-10-08 16:51:48,985 loglevel=INFO   logger=app.services.chat_service clear_memory() L125  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L125 
+2025-10-08 16:52:49,398 loglevel=INFO   logger=app.services.chat_service clear_memory() L125  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L125 
+2025-10-08 16:53:49,788 loglevel=INFO   logger=app.services.chat_service clear_memory() L125  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L125 
+2025-10-08 16:54:04,353 loglevel=INFO   logger=app.services.chat_service clear_memory() L125  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L125 
+2025-10-08 16:54:04,718 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 16:54:04,719 loglevel=INFO   logger=app.core.periodic_cleanup stop() L28   Stopped periodic cleanup   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L28  

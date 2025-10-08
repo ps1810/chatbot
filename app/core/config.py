@@ -1,8 +1,10 @@
 from pydantic_settings import BaseSettings
+from typing import List
 
 class Settings(BaseSettings):
 
     app_name: str = "BrainBay Chatbot"
+    environment: str = "development"
 
     model_name: str = "HuggingFaceTB/SmolLM2-1.7B-Instruct"
     max_memory_mps: str = "4GB"
@@ -13,6 +15,9 @@ class Settings(BaseSettings):
     top_p: float = 0.9
 
     max_history: int = 3
+
+    cors_origins: List[str] = ["http://localhost:3000"]
+    request_timeout: int = 60
     
 settings = Settings()
     

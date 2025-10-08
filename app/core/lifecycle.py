@@ -9,7 +9,7 @@ logger = get_logger(__name__)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info(f"Initializing model: {settings.model_name}")
-    model_context.initialize(settings.model_name)
+    await model_context.initialize(settings.model_name)
     yield
-    model_context.cleanup()
+    await model_context.cleanup()
     logger.info("Model cleaned up")

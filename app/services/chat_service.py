@@ -3,6 +3,7 @@ import torch
 import gc
 from app.core.logger import get_logger
 from app.core.config import settings
+import threading
 
 logger = get_logger(__name__)
 
@@ -11,30 +12,32 @@ class ChatService:
     def __init__(self, model, tokenizer):
         self.model = model
         self.tokenizer = tokenizer
+        self._lock = threading.Lock()
+        self.device = next(self.model.parameters()).device
+
+    def chat(self, message: str, history: List[Dict]) -> str:
+        # Use lock to prevent concurrent generation on same model
+        with self._lock:
+            return self._generate_response(message, history)
         
-    def chat(self, message: str, history: List[Dict]):
+    def _generate_response(self, message: str, history: List[Dict]):
 
         inputs = None
         outputs = None
     
         try:
-            messages = []
-
-            for msg in history[-settings.max_history*2:]:
-                messages.append({"role": msg.get("role", "user"), "content": msg.get("content", "")})
-
-            messages.append({"role": "user", "content": message})
-
+            messages = self._prepare_messages(message, history)
             input_text = self.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
 
-            device = next(self.model.parameters()).device
-            inputs = self.tokenizer(input_text, return_tensors="pt", return_attention_mask=True, padding=True, truncation=True, max_length=2048).to(device)
+            inputs = self.tokenizer(input_text, return_tensors="pt", return_attention_mask=True, padding=True, truncation=True, max_length=2048).to(self.device)
 
-            with torch.no_grad():
-                with torch.amp.autocast(device_type='mps' if device.type == 'mps' else 'cpu'):
-                    # Create a clean copy of inputs to avoid memory sharing
-                    input_ids = inputs['input_ids'].clone().detach()
-                    attention_mask = inputs['attention_mask'].clone().detach()
+            input_ids = inputs['input_ids'].to(self.device)
+            attention_mask = inputs['attention_mask'].to(self.device)
+
+            del inputs
+
+            with torch.inference_mode():
+                with torch.amp.autocast(device_type='mps' if self.device.type == 'mps' else 'cpu'):
                     
                     outputs = self.model.generate(
                         input_ids=input_ids,
@@ -47,17 +50,17 @@ class ChatService:
                         eos_token_id=self.tokenizer.eos_token_id,
                         repetition_penalty=1.1,
                         use_cache=False,
-                        return_dict_in_generate=False
+                        return_dict_in_generate=False,
+                        output_attentions=False,
+                        output_hidden_states=False
                     )
                     
-                    # Clean up temporary tensors
-                    del input_ids, attention_mask
-            
+            input_length = input_ids.shape[-1]
+            response_ids = outputs[0][input_length:]
             response_text = self.tokenizer.decode(
-                outputs[0][inputs['input_ids'].shape[-1]:],
+                response_ids,
                 skip_special_tokens=True
             ).strip()
-
 
             if not response_text:
                 response_text = "I'm not sure how to respond to that. Could you rephrase your question?"
@@ -66,28 +69,61 @@ class ChatService:
             
         except Exception as e:
             logger.error(f"Error while generating response: {e}")
-            gc.collect()
-            return "I'm not sure how to respond to that. Could you rephrase your question?"
-
+            raise
         finally:
-            # Safely clean up tensors
             try:
-                if inputs is not None:
-                    if isinstance(inputs, dict):
-                        for key in list(inputs.keys()):
-                            if torch.is_tensor(inputs[key]):
-                                inputs[key] = inputs[key].detach().cpu()
-                    del inputs
-                
-                if outputs is not None:
-                    if torch.is_tensor(outputs):
-                        outputs = outputs.detach().cpu()
+                del input_ids, attention_mask
+                if 'outputs' in locals():
                     del outputs
-                    
-                if torch.backends.mps.is_available():
-                    torch.mps.empty_cache()
-                    
-                gc.collect()
-            except Exception as e:
-                logger.error(f"Error during cleanup: {str(e)}")
+                if 'response_ids' in locals():
+                    del response_ids
+            except:
                 pass
+
+    def _prepare_messages(self, message: str, history: List[Dict]) -> List[Dict]:
+        messages = []
+        for msg in history[-settings.max_history * 2:]:
+            messages.append({
+                "role": msg.get("role", "user"), 
+                "content": msg.get("content", "")
+            })
+        messages.append({"role": "user", "content": message})
+        return messages
+
+    def _aggressive_cleanup(self):
+        """
+        Aggressive memory cleanup after each generation
+        """
+        try:
+            # Clear model's KV cache if it exists
+            if hasattr(self.model, 'past_key_values'):
+                self.model.past_key_values = None
+
+            if hasattr(self.model, 'reset_states'):
+                self.model.reset_states()
+            
+            # Clear any cached states in the model
+            if hasattr(self.model, '_reset_cache'):
+                self.model._reset_cache()
+                
+            if self.device.type == 'mps':
+                torch.mps.empty_cache()
+                # MPS-specific: force synchronization
+                torch.mps.synchronize()
+            
+            # Force Python garbage collection
+            for _ in range(3):
+                gc.collect()
+            
+        except Exception as e:
+            logger.warning(f"Cleanup warning: {e}")
+    
+    def clear_memory(self):
+        """
+        Public method for manual memory clearing (can be called periodically)
+        """
+        logger.info("Performing deep memory cleanup")
+        self._aggressive_cleanup()
+        
+        gc.collect()
+        gc.collect() 
