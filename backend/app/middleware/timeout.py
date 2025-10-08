@@ -3,7 +3,7 @@ from starlette.middleware.base import BaseHTTPMiddleware
 import asyncio
 
 class TimeoutMiddleware(BaseHTTPMiddleware):
-    def __init__(self, app, timeout: int = 30):
+    def __init__(self, app, timeout: int = 180):
         super().__init__(app)
         self.timeout = timeout
 
