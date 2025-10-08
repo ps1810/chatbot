@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Request, Depends, HTTPException, status
 from app.schemas.chat import ChatMessage, ChatResponse
+from app.schemas.health import Health
 from app.services.chat_service import ChatService
 from app.dependencies.providers import get_chat_service
 from app.core.logger import get_logger
@@ -38,4 +39,13 @@ async def chat(request: ChatMessage, chat_service: ChatService = Depends(get_cha
 @router.get("/health")
 async def health(chat_service: ChatService = Depends(get_chat_service)):
     logger.info("Health check")
-    return {"status": "healthy", "model_loaded": chat_service.model is not None}
+    try:
+        return Health(
+            status = "healthy",
+            model_loaded = chat_service.model is not None
+        )
+    except Exception as e:
+        return Health(
+            status="unhealthy",
+            model_loaded = False
+        )
