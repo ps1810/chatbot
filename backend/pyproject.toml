@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "brainbay"
+name = "Brainbay ChatBot"
 version = "0.1.0"
 description = "FastAPI-based chat application with LLM integration"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Prakhar Singh <prakharsingh181094@gmail.com>"]
 packages = [{include = "app"}]
 
 [tool.poetry.dependencies]

@@ -35,9 +35,29 @@ class ChatService:
 
             del inputs
 
+            device_type = 'cuda' if self.device.type == 'cuda' else 'cpu'
+            use_autocast = self.device.type in ['cuda', 'mps']
+
             with torch.inference_mode():
-                with torch.amp.autocast(device_type='mps' if self.device.type == 'mps' else 'cpu'):
+                if use_autocast:
+                    with torch.amp.autocast(device_type='mps' if self.device.type == 'mps' else 'cpu'):
                     
+                        outputs = self.model.generate(
+                            input_ids=input_ids,
+                            attention_mask=attention_mask,
+                            max_new_tokens=settings.max_new_tokens,
+                            do_sample=True,
+                            temperature=settings.temperature,
+                            top_p=settings.top_p,
+                            pad_token_id=self.tokenizer.pad_token_id or self.tokenizer.eos_token_id,
+                            eos_token_id=self.tokenizer.eos_token_id,
+                            repetition_penalty=1.1,
+                            use_cache=False,
+                            return_dict_in_generate=False,
+                            output_attentions=False,
+                            output_hidden_states=False
+                        )
+                else:
                     outputs = self.model.generate(
                         input_ids=input_ids,
                         attention_mask=attention_mask,

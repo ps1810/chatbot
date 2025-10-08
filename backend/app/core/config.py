@@ -8,7 +8,7 @@ class Settings(BaseSettings):
 
     model_name: str = "HuggingFaceTB/SmolLM2-1.7B-Instruct"
     max_memory_mps: str = "4GB"
-    max_memory_cpu: str = "12GB"
+    max_memory_cpu: str = "8GB"
 
     max_new_tokens: int = 256
     temperature: float = 0.7

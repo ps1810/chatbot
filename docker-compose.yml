@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: brainbay-backend
+    environment:
+      - APP_NAME=BrainBay Chatbot
+      - ENVIRONMENT=production
+      - MODEL_NAME=HuggingFaceTB/SmolLM2-1.7B-Instruct
+      - MAX_MEMORY_MPS=4GB
+      - MAX_MEMORY_CPU=12GB
+      - MAX_NEW_TOKENS=256
+      - TEMPERATURE=0.7
+      - TOP_P=0.9
+      - MAX_HISTORY=3
+      - REQUEST_TIMEOUT=60
+    volumes:
+      - model-cache:/root/.cache/huggingface
+      - backend-logs:/app/app/logs
+    networks:
+      - brainbay-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/chat/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          memory: 16G
+        reservations:
+          memory: 8G
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: brainbay-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - brainbay-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+
+networks:
+  brainbay-network:
+    driver: bridge
+
+volumes:
+  model-cache:
+    driver: local
+  backend-logs:
+    driver: local
