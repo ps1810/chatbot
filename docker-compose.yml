@@ -5,18 +5,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: brainbay-backend
-    environment:
-      - APP_NAME=BrainBay Chatbot
-      - ENVIRONMENT=production
-      - MODEL_NAME=HuggingFaceTB/SmolLM2-1.7B-Instruct
-      - MAX_MEMORY_MPS=4GB
-      - MAX_MEMORY_CPU=12GB
-      - MAX_NEW_TOKENS=256
-      - TEMPERATURE=0.7
-      - TOP_P=0.9
-      - MAX_HISTORY=3
-      - REQUEST_TIMEOUT=60
+    container_name: chat-backend
     volumes:
       - model-cache:/root/.cache/huggingface
       - backend-logs:/app/app/logs
@@ -40,7 +29,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: brainbay-frontend
+    container_name: chat-frontend
     ports:
       - "3000:80"
     depends_on:
