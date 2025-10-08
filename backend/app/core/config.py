@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     max_history: int = 3
 
     cors_origins: List[str] = ["http://localhost:3000"]
-    request_timeout: int = 60
+    request_timeout: int = 180
     cleanup_interval_seconds: int = 60
     
 settings = Settings()

@@ -15,6 +15,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.add_middleware(TimeoutMiddleware, timeout=180)
+app.add_middleware(TimeoutMiddleware, timeout=settings.request_timeout)
 
 app.include_router(chat.router)
