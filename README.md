@@ -1,4 +1,4 @@
-# BrainBay ChatBot
+# ChatBot
 
 A full-stack AI chatbot application built with FastAPI backend and React frontend, featuring real-time conversation with a local language model.
 
