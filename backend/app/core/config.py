@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     max_memory_mps: str = "4GB"
     max_memory_cpu: str = "8GB"
 
-    max_new_tokens: int = 256
+    max_new_tokens: int = 128
     temperature: float = 0.7
     top_p: float = 0.9
 
