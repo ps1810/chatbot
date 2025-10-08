@@ -17,8 +17,7 @@ async def chat(request: ChatMessage, chat_service: ChatService = Depends(get_cha
                     status_code=status.HTTP_400_BAD_REQUEST,
                     detail="Message cannot be empty"
                 )
-        response = await asyncio.to_thread( 
-            chat_service.chat, 
+        response = await chat_service.chat(
             request.message, 
             request.history
         )

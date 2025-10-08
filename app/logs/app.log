@@ -148,3 +148,135 @@ response
 2025-10-08 16:54:04,353 loglevel=INFO   logger=app.services.chat_service clear_memory() L125  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L125 
 2025-10-08 16:54:04,718 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
 2025-10-08 16:54:04,719 loglevel=INFO   logger=app.core.periodic_cleanup stop() L28   Stopped periodic cleanup   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L28  
+2025-10-08 18:06:56,210 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 18:07:01,593 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 18:07:01,595 loglevel=INFO   logger=app.core.periodic_cleanup start() L19   Started periodic cleanup (every 60s)   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L19  
+2025-10-08 18:07:07,514 loglevel=INFO   logger=app.api.v1.chat health() L41   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L41  
+2025-10-08 18:07:07,544 loglevel=INFO   logger=app.api.v1.chat health() L41   Health check   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L41  
+2025-10-08 18:07:13,755 loglevel=ERROR  logger=app.api.v1.chat chat() L33   Unexpected error: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object ChatService.chat at 0x1171e0220>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L33  
+Traceback (most recent call last):
+  File "/Users/psingh/Documents/brainbay/app/api/v1/chat.py", line 25, in chat
+    return ChatResponse(response=response)
+  File "/Users/psingh/Library/Caches/pypoetry/virtualenvs/brainbay-CBsLHR_U-py3.13/lib/python3.13/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object ChatService.chat at 0x1171e0220>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2025-10-08 18:08:01,597 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:08:51,112 loglevel=INFO   logger=app.core.periodic_cleanup stop() L25   Stopped periodic cleanup   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L25  
+2025-10-08 18:08:51,113 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:08:51,481 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 18:09:01,944 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 18:09:06,683 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 18:09:06,683 loglevel=INFO   logger=app.core.periodic_cleanup start() L19   Started periodic cleanup (every 60s)   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L19  
+2025-10-08 18:09:13,735 loglevel=ERROR  logger=app.api.v1.chat chat() L33   Unexpected error: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object ChatService.chat at 0x119067a60>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L33  
+Traceback (most recent call last):
+  File "/Users/psingh/Documents/brainbay/app/api/v1/chat.py", line 25, in chat
+    return ChatResponse(response=response)
+  File "/Users/psingh/Library/Caches/pypoetry/virtualenvs/brainbay-CBsLHR_U-py3.13/lib/python3.13/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object ChatService.chat at 0x119067a60>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2025-10-08 18:10:06,683 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:14:37,774 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:30:23,298 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:31:23,820 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:32:24,164 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:33:24,538 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:34:24,886 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:35:25,231 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:36:25,589 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:37:25,935 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:38:26,290 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:39:26,644 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:40:26,987 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:41:27,336 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:42:27,696 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:43:28,052 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:44:28,404 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:45:28,753 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:46:29,106 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:47:29,463 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:48:29,816 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:49:30,164 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:50:30,504 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:51:30,851 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:52:31,225 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:53:31,598 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:54:31,964 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:55:32,307 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:56:32,662 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:57:33,008 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:58:33,357 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 18:59:33,708 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:00:34,054 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:01:34,392 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:02:34,741 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:03:35,105 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:04:35,468 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:05:35,819 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:06:36,159 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:07:36,504 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:08:36,853 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:09:37,200 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:10:37,550 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:11:37,896 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:12:38,257 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:13:38,602 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:14:38,943 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:15:39,292 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:16:39,651 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:17:39,999 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:18:40,349 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:19:40,707 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:20:41,073 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:21:41,423 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:22:41,781 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:23:42,128 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:24:42,481 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:25:42,825 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:26:43,188 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:27:43,550 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:28:43,921 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:29:44,272 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:30:44,629 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:36:27,073 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:36:38,502 loglevel=INFO   logger=app.core.periodic_cleanup stop() L25   Stopped periodic cleanup   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L25  
+2025-10-08 19:36:38,503 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:36:39,186 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 19:37:12,188 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 19:37:17,016 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 19:37:17,016 loglevel=INFO   logger=app.core.periodic_cleanup start() L19   Started periodic cleanup (every 60s)   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L19  
+2025-10-08 19:37:23,398 loglevel=ERROR  logger=app.api.v1.chat chat() L33   Unexpected error: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object ChatService.chat at 0x116967d30>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type   call_trace=/Users/psingh/Documents/brainbay/app/api/v1/chat.py L33  
+Traceback (most recent call last):
+  File "/Users/psingh/Documents/brainbay/app/api/v1/chat.py", line 25, in chat
+    return ChatResponse(response=response)
+  File "/Users/psingh/Library/Caches/pypoetry/virtualenvs/brainbay-CBsLHR_U-py3.13/lib/python3.13/site-packages/pydantic/main.py", line 250, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ChatResponse
+response
+  Input should be a valid string [type=string_type, input_value=<coroutine object ChatService.chat at 0x116967d30>, input_type=coroutine]
+    For further information visit https://errors.pydantic.dev/2.12/v/string_type
+2025-10-08 19:38:17,014 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:38:27,519 loglevel=INFO   logger=app.core.periodic_cleanup stop() L25   Stopped periodic cleanup   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L25  
+2025-10-08 19:38:27,520 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:38:27,925 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  
+2025-10-08 19:40:11,579 loglevel=INFO   logger=app.core.lifecycle lifespan() L11   Initializing model: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L11  
+2025-10-08 19:40:16,379 loglevel=INFO   logger=app.infrastructure.model_loader load() L21   Model loaded successfully: HuggingFaceTB/SmolLM2-1.7B-Instruct   call_trace=/Users/psingh/Documents/brainbay/app/infrastructure/model_loader.py L21  
+2025-10-08 19:40:16,379 loglevel=INFO   logger=app.core.periodic_cleanup start() L19   Started periodic cleanup (every 60s)   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L19  
+2025-10-08 19:41:16,381 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:41:32,346 loglevel=INFO   logger=app.core.periodic_cleanup stop() L25   Stopped periodic cleanup   call_trace=/Users/psingh/Documents/brainbay/app/core/periodic_cleanup.py L25  
+2025-10-08 19:41:32,346 loglevel=INFO   logger=app.services.chat_service clear_memory() L123  Performing deep memory cleanup   call_trace=/Users/psingh/Documents/brainbay/app/services/chat_service.py L123 
+2025-10-08 19:41:32,703 loglevel=INFO   logger=app.core.lifecycle lifespan() L15   Model cleaned up   call_trace=/Users/psingh/Documents/brainbay/app/core/lifecycle.py L15  

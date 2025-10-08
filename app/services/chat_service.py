@@ -3,7 +3,7 @@ import torch
 import gc
 from app.core.logger import get_logger
 from app.core.config import settings
-import threading
+import asyncio
 
 logger = get_logger(__name__)
 
@@ -12,13 +12,12 @@ class ChatService:
     def __init__(self, model, tokenizer):
         self.model = model
         self.tokenizer = tokenizer
-        self._lock = threading.Lock()
         self.device = next(self.model.parameters()).device
 
-    def chat(self, message: str, history: List[Dict]) -> str:
+    async def chat(self, message: str, history: List[Dict]) -> str:
         # Use lock to prevent concurrent generation on same model
-        with self._lock:
-            return self._generate_response(message, history)
+        async with asyncio.Lock():
+            return await asyncio.to_thread(self._generate_response, message, history)
         
     def _generate_response(self, message: str, history: List[Dict]):
 
@@ -71,14 +70,13 @@ class ChatService:
             logger.error(f"Error while generating response: {e}")
             raise
         finally:
-            try:
-                del input_ids, attention_mask
-                if 'outputs' in locals():
-                    del outputs
-                if 'response_ids' in locals():
-                    del response_ids
-            except:
-                pass
+            for tensor in [input_ids, attention_mask, outputs, response_ids]:
+                if tensor is not None:
+                    del tensor
+
+            if self.device.type == "mps":
+                torch.mps.empty_cache()
+            gc.collect()
 
     def _prepare_messages(self, message: str, history: List[Dict]) -> List[Dict]:
         messages = []

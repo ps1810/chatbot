@@ -4,6 +4,7 @@ from app.infrastructure.model_loader import ModelLoader
 from app.services.chat_service import ChatService
 from app.core.periodic_cleanup import PeriodicCleanup
 import asyncio
+from app.core.config import settings
 
 class ModelContext:
     def __init__(self):
@@ -24,32 +25,27 @@ class ModelContext:
                 self._chat_service = ChatService(self._model, self._tokenizer)
                 self._cleanup_task = PeriodicCleanup(
                     self._chat_service, 
-                    interval_seconds=60
+                    interval_seconds=settings.cleanup_interval_seconds
                 )
                 self._cleanup_task.start()
                 self._initialized = True
                 
     async def cleanup(self) -> None:
         with self._lock:
-            if self._initialized:
-                if self._cleanup_task:
-                    try:
-                        loop = asyncio.get_event_loop()
-                        if loop.is_running():
-                            asyncio.create_task(self._cleanup_task.stop())
-                        else:
-                            loop.run_until_complete(self._cleanup_task.stop())
-                    except:
-                        pass
-                    self._cleanup_task = None
+            if not self._initialized:
+                return
 
-                if self._chat_service:
-                    self._chat_service.clear_memory()
-                
-                self._model = None
-                self._tokenizer = None
-                self._initialized = False
-                self._chat_service = None
+            if self._cleanup_task:
+                self._cleanup_task.stop()
+                self._cleanup_task = None
+
+            if self._chat_service:
+                self._chat_service.clear_memory()
+            
+            self._model = None
+            self._tokenizer = None
+            self._initialized = False
+            self._chat_service = None
 
     def get_service(self) -> ChatService:
         with self._lock:
