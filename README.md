@@ -216,8 +216,6 @@ Response:
 - Automatic retry mechanisms
 - Timeout handling (60s default)
 
-## 🛠️ Development
-
 ## 🐳 Docker Details
 
 ### Build Individual Services
