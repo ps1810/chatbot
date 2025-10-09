@@ -6,6 +6,8 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     container_name: chat-backend
+    # environment:
+    #   - MODEL_NAME=HuggingFaceTB/SmolLM2-360M-Instruct
     volumes:
       - model-cache:/root/.cache/huggingface
       - backend-logs:/app/app/logs
